@@ -1,0 +1,41 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/7e/4d/49/7e4d495a4c88945cce25cb210f2f81fd.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-weight: bold;
+
+    
+}
+
+h1{
+    text-align: center;
+    border: 1px solid black;
+    font-size: 30px;
+}
+
+p{
+    font-size: 18px;
+}
+
+#lapso1, #lapso2, #lapso3{
+    width: 30px;
+}
+
+#boton{
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+    margin-top: 5px;
+    background-color: cadetblue;
+    color: white;
+}
+
+#boton:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+table{
+    font-weight: bold;
+}

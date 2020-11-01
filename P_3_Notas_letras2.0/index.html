@@ -1,0 +1,35 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Notas</title>
+</head>
+
+<body>
+    <h1>Cálculo de Notas</h1>
+    <p>Ingrese su nombre y calificación en cada lapso a lo largo del año escolar</p>
+    <table>
+        <tr class="datos">
+            <td>Nombre del Alumno:</td>
+            <td><input type="text" id="nombre" placeholder="........." maxlength="50"> </td>
+        </tr>
+        <tr>
+            <td>Calificación 1er Lapso:</td> 
+            <td><input id="lapso1" placeholder=".." maxlength="2" minlength="1"> </td> 
+        </tr>
+        <tr>
+            <td>Calificación 2do Lapso:</td>
+            <td><input id="lapso2" placeholder=".." maxlength="2" minlength="1"> </td>
+        </tr>
+        <tr>
+            <td>Calificación 3er Lapso:</td> 
+            <td><input id="lapso3" placeholder=".." maxlength="2" minlength="1"> </td>
+        </tr>
+
+    </table>
+<button id="boton">Calculo</button> 
+<div id="resultado"> </div>
+
+<script src="script.js"></script>
+</body>
+</html>
