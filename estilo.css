@@ -248,7 +248,7 @@ h1 b{
 }
 
 .social-link.github{
-    background-image: url(github2.png);
+    background-image: url(/github2.png);
     background-size: 50px 50px;
     background-repeat: no-repeat;
 }
