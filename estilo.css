@@ -171,9 +171,7 @@ h1 b{
 
 #contacto{
     background-color: rgb(4, 148, 175);
-    /*display: flex;
-    flex-direction: column;
-    align-content: center;*/
+
 }
 
 #contacto h3{
@@ -196,7 +194,7 @@ h1 b{
     border-radius: 5px;
     border-style: solid;
     padding: 10px 20px 10px 30px;
-    background-image: url(/email.png);
+    background-image: url(email.png);
     background-size: 30px 30px;
     background-repeat: no-repeat;
     background-position-y:center;
@@ -232,25 +230,25 @@ h1 b{
 }
 
 .social-link.twitter{
-    background-image: url(/twitter.png);
+    background-image: url(twitter.png);
     background-size: 50px 50px;
     background-repeat: no-repeat;
 }
 
 .social-link.facebook{
-    background-image: url(/facebook.png);
+    background-image: url(facebook.png);
     background-size: 50px 50px;
     background-repeat: no-repeat;
 }
 
 .social-link.instagram{
-    background-image: url(/instagram.png);
+    background-image: url(instagram.png);
     background-size: 50px 50px;
     background-repeat: no-repeat;
 }
 
 .social-link.github{
-    background-image: url(/github2.png);
+    background-image: url(github2.png);
     background-size: 50px 50px;
     background-repeat: no-repeat;
 }
