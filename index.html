@@ -8,29 +8,35 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <figure class="logo">
-                <img src="logo2.png" alt="logo" class="logo-img">
-            </figure>
-            <nav class="menu">
-                <ol>
+        <div class="container">          
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+              </div>
+
+
+        <nav class="menu">
+                <ul>
                     <li>
-                        <a class="link" href="#portafolio">Portafolio</a>
+                        <ol>
+                            <li>
+                                <a class="link" href="#portafolio">Portafolio</a>
+                            </li>
+                            <li>
+                                <a class="link" href="#estudios">Estudios</a>
+                            </li>
+                            <li>
+                                <a class="link" href="#contacto">Trabajemos Juntos</a>
+                            </li>
+                        </ol>
                     </li>
-                    <li>
-                        <a class="link" href="#estudios">Estudios</a>
-                    </li>
-                    <li>
-                        <a class="link" href="#contacto">Trabajemos Juntos</a>
-                    </li>
-                </ol>
+                </ul>
             </nav>
         </div>
     </header>
     <section class="hero">
         <div class="container">
             <h1>
-                Hola! soy <b> Hernan Amaiz</b> (Maizorito para los amigos)<br>Desarrollador <b>Javascript</b> con pasión <br> por la creacion de <b>herramientas web</b>.
+                ¡Hola! soy <b> Hernan Amaiz</b> <br>Desarrollador <b>Javascript</b> con pasión <br> por  la creacion de <b>herramientas web</b>
             </h1>
             
         </div>
@@ -44,7 +50,7 @@
                     <h3 class="project-title">Sort-eo</h3>
                     <h6 class="project-language">Javascript puro</h6> 
                     <p class="project-date"><small><b>Fecha:</b> 10/08/2020</small></p> 
-                    <p class="project-link"><small><b>Puedes verlo hacienco click aqui:</b> <a href='/sorteo/index.html' target="_blank"> aquí </a></small></p>
+                    <p class="project-link"><small><b>Puedes verlo hacienco click aqui:</b> <a href='/sorteo/index.html' target="_blank"> Sort-eo </a></small></p>
                     <p class="project-description">Esta página permite ingresar una cantidad indeterminada de elementos (participantes)
                     y luego realiza una seleccion aleatoria entre todos. Igualmente permite
                     asignar un 1er, 2do y 3er lugar (o a preferencia del usuario).</p>
@@ -102,6 +108,10 @@
         <div>
             <p>Hernan Amaiz. 2020</p>
         </div>
-    </footer>
+        <figure class="logo">
+            <img src="logo2.png" alt="logo" class="logo-img">
+        </figure>
+        </footer>
+    <script src="main.js"></script>
 </body>
 </html>

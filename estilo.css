@@ -3,6 +3,80 @@ body{
     margin: 0;
 }
 
+.header{
+    background-color:rgb(4, 148, 175);
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.container{
+    width: 900px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Menu */
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+  /* Animacion del menu */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+
+
 .hero{
     height: 300px;
     background-image: url(banner.jpg);
@@ -15,18 +89,12 @@ body{
     align-items: center;
 }
 
+
 .logo-img{
     width: 80px;
 }
 
-.header{
-    background-color:rgb(4, 148, 175);
-    color:white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
+
 
 .header a{
     color: white;
@@ -35,10 +103,22 @@ body{
     align-items: center;
     height: inherit;
     padding: 0 10px;
+    transition: 1s;
 }
+
+.header a:hover{
+    color: lightgray;
+}
+
 
 .menu{
     height: inherit;
+}
+
+.menu img{
+    width:45px;
+    margin: 20px;
+    transition: 1s;
 }
 
 ol, ul{
@@ -46,6 +126,7 @@ ol, ul{
     padding: 0;
     list-style: none;
 }
+
 
 .header ol{
     display: flex;
@@ -55,7 +136,11 @@ ol, ul{
 
 .header ol li{
     height: inherit;
+    display: none;
+    
 }
+
+
 
 
 figure{
@@ -127,6 +212,17 @@ h1 b{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.project-link a{
+    text-decoration: none;
+    color: rgb(3, 115, 134);
+    transition: 1s;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.project-link a:hover{
+    color: lightseagreen;
 }
 
 .project-presentation:last-child{
@@ -260,11 +356,3 @@ h1 b{
     padding: 1px;
 }
 
-.container{
-    width: 900px;
-    margin: 0 auto;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    height: inherit;
-}
