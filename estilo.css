@@ -43,7 +43,6 @@ body{
     height: 6px;
     background: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
     transition: all .5s ease-in-out;
   }
   .menu-btn__burger::before,
@@ -113,13 +112,9 @@ body{
 
 .menu{
     height: inherit;
+    display: none;
 }
 
-.menu img{
-    width:45px;
-    margin: 20px;
-    transition: 1s;
-}
 
 ol, ul{
     margin: 0;
