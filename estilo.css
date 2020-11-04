@@ -81,7 +81,7 @@ body{
   }
 
   .menu-btn.open .menu-btn__burger::after ul{
-    display: flex;
+    display: none;
   }
 
   /* lo dejare hasta aca por hoy */
