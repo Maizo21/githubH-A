@@ -76,13 +76,9 @@ body{
 
   /* prueba para el menu desplegable en lateral */
 
-  .menu-btn__burger ul{
-    display: none;
-  }
-
-  .menu-btn.open .menu-btn__burger::after ul{
-    display: none;
-  }
+#list{
+    text-decoration: none;
+}
 
   /* lo dejare hasta aca por hoy */
 
