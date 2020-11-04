@@ -81,25 +81,22 @@ body{
 /*Lista del menu*/
 
 #list{
-    margin: 0 0 0 50px;
+    margin: 0 0 0 60px;
 }
 
 #list ul{
     padding: 4px;
-    transition: 1s;
 }
 
 #list ul li{
     display: inline-flex;
-
 }
 
 #list ul li > a{
     text-decoration: none;
     color: white;
     height: inherit;
-    padding: 0 10px;
-    transition: 1s;
+    margin-right: 20px;
     font-family: 'Fjalla One', sans-serif;
     letter-spacing: 1px;
 }
@@ -111,7 +108,7 @@ body{
 /* Animacion de la lista del menu*/
 
 .container .menu-btn.open ~ #list{
-    transition: 1s;
+    transition: .5s;
 }
 
 .container .menu-btn.open ~ #list{
