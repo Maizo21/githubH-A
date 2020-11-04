@@ -74,6 +74,17 @@ body{
     transform: rotate(-45deg) translate(35px, 35px);
   }
 
+  /* prueba para el menu desplegable en lateral */
+
+  .menu-btn__burger ul{
+    display: none;
+  }
+
+  .menu-btn.open .menu-btn__burger::after ul{
+    display: flex;
+  }
+
+  /* lo dejare hasta aca por hoy */
 
 
 .hero{
@@ -88,13 +99,6 @@ body{
     align-items: center;
 }
 
-
-.logo-img{
-    width: 80px;
-}
-
-
-
 .header a{
     color: white;
     text-decoration: none;
@@ -107,36 +111,6 @@ body{
 
 .header a:hover{
     color: lightgray;
-}
-
-
-.menu{
-    height: inherit;
-    display: none;
-}
-
-
-ol, ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-
-.header ol{
-    display: flex;
-    height: inherit;
-
-}
-
-.header ol li{
-    height: inherit;
-    display: none;
-    
-}
-
-figure{
-    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -346,5 +320,9 @@ h1 b{
     color: white;
     text-align: center;
     padding: 1px;
+}
+
+.logo-img{
+    width: 80px;
 }
 
