@@ -3,6 +3,38 @@ body{
     margin: 0;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./fonts/icomoon.eot?juqkpc');
+  src:  url('./fonts/icomoon.eot?juqkpc#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?juqkpc') format('truetype'),
+    url('./fonts/icomoon.woff?juqkpc') format('woff'),
+    url('./fonts/icomoon.svg?juqkpc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
+
 
 .header{
     background-color:rgb(4, 148, 175);
@@ -11,109 +43,42 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    flex-wrap: wrap;
 }
 
 /* Contenedor mientas estudio responsive*/
 
 .container{
-    width: 900px;
+    max-width: 1000px;
+    width: 100%;
+    flex: 1;
     margin: 0 auto;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    height: inherit;
+    height: auto;
 }
 
-/* Menu */
-.menu-btn {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
+.list{
+    width: 100%;
 }
 
-.menu-btn__burger {
-    width: 50px;
-    height: 6px;
-    background: #fff;
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
- }
-
-.menu-btn__burger::before,
-.menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background: #fff;
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-}
-
-.menu-btn__burger::before {
-    transform: translateY(-16px);
-}
-
-.menu-btn__burger::after {
-    transform: translateY(16px);
- }
-
- /* Animacion del menu */
-.menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-}
-
-.menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-}
-
-.menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-}
-
-/*Lista del menu*/
-
-#list{
-    margin: 0 0 0 60px;
-}
-
-#list ul{
+.list ul{
     padding: 4px;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
 }
 
-#list ul li{
-    display: inline-flex;
-}
-
-#list ul li > a{
+.list ul li > a{
     text-decoration: none;
     color: white;
-    height: inherit;
+    height: auto;
     margin-right: 20px;
     font-family: 'Fjalla One', sans-serif;
     letter-spacing: 1px;
     transition: .6s;
 }
 
-#list a:hover{
+.list a:hover{
     color: black;
-}
-
-/* Animacion de la lista del menu*/
-
-.container .menu-btn.open ~ #list{
-    transition: .5s;
-}
-
-.container .menu-btn.open ~ #list{
-    transform: translateX(20px);
 }
 
 .hero{
@@ -126,6 +91,7 @@ body{
     z-index: 0;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 h1, 
@@ -144,7 +110,7 @@ h1{
     letter-spacing: -.3px;
     color: white;
     margin: 0;
-    padding-left: 10px;
+    padding-left: 50px;
 }
 
 h1 b{
@@ -165,7 +131,7 @@ h1 b{
 }
 
 .project-details{
-    width: 500px;
+    width: 50%;
 }
 
 .project-title{
@@ -187,9 +153,15 @@ h1 b{
     font-family: 'Fjalla One', sans-serif;
 }
 
-
 .project-image{
-    width: 350px;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.project-image::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
 }
 
 .project-presentation{
@@ -201,6 +173,7 @@ h1 b{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .project-link a{
@@ -210,6 +183,9 @@ h1 b{
     font-family: 'Fjalla One', sans-serif;
 }
 
+.project{
+    flex-wrap: wrap;
+}
 .project-link a:hover{
     color: lightseagreen;
 }
@@ -224,6 +200,7 @@ h1 b{
 
 .certification{
     padding-top: 25px;
+    flex-wrap: wrap;
 }
 
 .certification-pages{
@@ -233,31 +210,38 @@ h1 b{
     padding: 10px;
     background:white;
 }
+
 .image-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3,1fr);
+    place-content: center;
+    place-items: center;
 }
 
 .certification-image{
-    border: 1px solid black;
-    border-radius: 30px;
+    border-radius: 20px;
     height: 80px;
-    width: 143px;
+    width: auto;
+    max-width: 125px;
     object-fit: contain;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.image-container a{
+    text-decoration: none;
 }
 
 .certification-image:hover{
     border: 2px solid blue;
 }
 
-#contacto{
+.contacto{
     background-color: rgb(4, 148, 175);
-
 }
 
-#contacto h3{
+.contacto h3{
     margin:0;
     padding:15px;
     padding-top: 25px;
@@ -302,7 +286,7 @@ h1 b{
 .social{
     display: flex;
     justify-content: center;
-    
+    flex-wrap: wrap;
 }
 .social-link{
     width: 50px;
@@ -341,6 +325,7 @@ h1 b{
     color: white;
     text-align: center;
     padding: 1px;
+    flex-wrap: wrap;
 }
 
 .logo{
@@ -350,5 +335,183 @@ h1 b{
 
 .logo-img{
     width: 80px;
+}
+
+.burger-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(160, 160, 160, 0.801);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    color: white;
+    z-index: 3;
+}
+
+@media screen and (max-width:1024px){
+    
+}
+
+@media screen and (max-width:767px){
+    .burger-button{
+        display: flex;
+    }
+
+    h2, .certification{
+        font-size: 1.1em;
+        font-family: 'Fjalla One', sans-serif;
+    }
+
+    .header{
+        display: block;
+        height: auto;
+    }
+
+    .list{
+        position: fixed;
+        background-color: rgba(4, 149, 175, 0.973);
+        z-index: 2;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        left: -100vw;
+        transition: .3s;
+    }
+
+    .list.is-active{
+        left: 0;
+    }
+
+    .hero{
+        height: auto;
+        background-position: left;
+        background-size: cover;
+    }
+    
+    .hero h1{
+        font-size: 1.5em;
+        margin: 0 auto;
+        padding-left: 2em;
+    }
+
+    .list ul{
+        display: block;
+        height: auto;
+    }
+
+    .list ul li{
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list ul li > a{
+        font-size: 1.8em;
+    }
+
+    .project-presentation{
+        display: block;
+    }
+
+    .project-details{
+        width: auto;
+        font-size: 16px;
+    }
+
+    .portfolio{
+        font-size: 1.2em;
+    }
+
+    .project-title{
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+
+    .project-link,
+    .project-language{
+        font-size: .7em;
+    }
+
+    .project-date{
+        font-size: .8em;
+    }
+
+    .project-description,
+    .actualization{
+        font-size: .9em;
+    }
+
+    .project-description, 
+    .project-link, 
+    .project-date, 
+    .actualization{
+        margin: .4em 0;
+    }
+
+    .project-presentation{
+        display: flex;
+        justify-content: center;
+    }
+    .project-image{
+        width: 70%;
+        height: 40%;
+    
+    }
+
+}
+
+@media screen and (max-width:480px){
+    .hero{
+        height: auto;
+        background-size: 150%;
+        background-position-x: left;
+    }
+
+    .hero h1{
+        font-size: 1.1em;
+        margin: 0 auto;
+        padding-left: 3em;        
+    }
+
+    .project-image{
+        width: 100%;
+        height: auto;
+    }
+
+    .project-details{
+        font-size: 14px;
+    }
+
+    .certification-image{
+        display: flex;
+        height: 40px;
+        max-width: 80px;
+        object-fit: contain;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .contacto{
+        height: auto;
+        padding: 5px;
+        display: block;
+        text-align: center;
+    }
+
+    .container button{
+        margin: 1em auto;
+    }
+
+    .contacto h3{
+        margin-top: 0;
+        font-size: 1em;
+    }
 }
 

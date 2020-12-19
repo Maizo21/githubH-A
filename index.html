@@ -5,16 +5,28 @@
     <link rel="icon" type="image/png" href="favicon.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">          
-            <div class="menu-btn">
-                <div class="menu-btn__burger">
-                </div>   
-                        
-            </div>
-            <div id="list"></div> 
+            <div id="list" class="list">
+                <ul>
+                    <!-- Cambiar el onclick y realizarlo en el archivo del codigo mediante un listener -->
+                    <li>
+                        <a class="link" href="#portafolio" onclick="hideMenu()">Portafolio</a>
+                    </li>
+                    
+                    <li>
+                        <a class="link" href="#estudios" onclick="hideMenu()">Estudios</a>
+                    </li>
+                    
+                    <li>
+                        <a class="link" href="#contacto" onclick="hideMenu()">Contacto</a>
+                    </li>
+                </ul> 
+            </div> 
             </div>
             
     </header>
@@ -25,7 +37,7 @@
             </h1>
             
         </div>
-    </section>
+    </section> 
     <section id='portafolio'>
         <div class="container">
             <h2 class="portfolio">Portafolio (Proyectos Creados)</h2>
@@ -39,10 +51,10 @@
                     <p class="project-description">Esta página permite ingresar una cantidad indeterminada de elementos (participantes)
                     y luego realiza una seleccion aleatoria entre todos. Igualmente permite
                     asignar un 1er, 2do y 3er lugar (o a preferencia del usuario).</p>
-                    <p><small>Sigo trabajando en ella. Planeo agregar la opción de indicar a cantidad
-                        participante su respectivo premio.</small></p>     
+                    <p class="actualization">Sigo trabajando en ella. Planeo agregar la opción de indicar a cantidad
+                        participante su respectivo premio.</p>     
                 </div>
-                    <img src="construccion.png" alt="" class="project-image">
+                    <iframe src="https://maizo21.github.io/batatabit/" frameborder="0" scrolling="no" class="project-image"></iframe>
                 </div>
                 
                 <div class="project-presentation">
@@ -53,10 +65,10 @@
                     <p class="project-link"><small><b>Puedes verlo en:</b> <a href="/Musicaweb/index.html" target="_blank">Link</a></small></p>
                     <p class="project-description">En esta página se puede descargar canciones y discos, ademas de reproducirlos de forma online.
                         <br>Por ahora solo estoy utilizando Javascript para su desarrollo.</p>
-                    <p><small>Planeo agregar la opción de registro para poder crear cuentas y con ello poder crear listas
-                        de reproducción.</small></p> 
+                    <p class="actualization">Planeo agregar la opción de registro para poder crear cuentas y con ello poder crear listas
+                        de reproducción.</p> 
                 </div>
-                    <img src="construccion.png" alt="" class="project-image">
+                    <iframe src="https://maizo21.github.io/halloween/" frameborder="0" scrolling="no" class="project-image" ></iframe>
                 </div>
             </article>
         </div>
@@ -66,16 +78,16 @@
             <h2 class="certification">Mis estudios</h2>
             <article class="certification-pages">
                 <figure class="image-container">
-                    <a  href="#"><img src="udemy.png" class="certification-image" alt="Udemy"> </a><br>
-                    <a  href="#"><img src="coursera.jpg" class="certification-image" alt="Coursera"> </a><br>
+                    <a  href="#"><img src="udemy.png" class="certification-image" alt="Udemy"> </a>
+                    <a  href="#"><img src="coursera.jpg" class="certification-image" alt="Coursera"> </a>
                     <a  href="#"><img src="sololearn.jpg" class="certification-image" alt="Sololearn"> </a>
                 </figure>
             </article>
     </div>
     </section>
-    <section id="contacto">
+    <section id="contacto" class="contacto">
         <div class="container">
-            <h3>Programemos algo juntos!</h3>
+            <h3>¡Programemos algo juntos!</h3>
             <form action="/suscripcion/" class="form-email">
             <input type="text" placeholder="Déjame tu email" id="email">
             <button>Enviar</button>
